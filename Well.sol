@@ -29,6 +29,10 @@ contract Will{
     lastVisited= block.timestamp;
 
   }
+  function changeRecipent(address _recipient) onlyOwner public {
+    recipient = payable(_recipient);
+  }
+  
   function ping() public onlyOwner {
     lastVisited=block.timestamp;
   }
